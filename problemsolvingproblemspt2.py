@@ -1,4 +1,4 @@
-#1. Happy Numbers a. https://en.wikipedia.org/wiki/Happy_number
+#1. Happy Numbers
 answer = int(input(f'Enter number to see if happy/sad!'))
 previous_numbers = []
 while True:
@@ -13,8 +13,6 @@ while True:
         previous_numbers.append(answer)
 
 #2. Prime Numbers
-#a. A prime number is a number that is only divisible by one and itself.
-#b. Write a method that prints out all prime numbers between 1 and 100
 for number in range(1, 101):
     count = 0
     for i in range(2, (number//2 + 1)):
@@ -25,8 +23,16 @@ for number in range(1, 101):
         print(number, end='   ')
     
 #3. Fibonacci
-#a. A series of numbers in which each number (Fibonacci number) is the sum of the two preceding numbers. The simplest is the series 1, 1, 2, 3, 5, 8, etc.
-#b. Write a method that does the Fibonacci sequence starting at 1
-#c. HARDER VERSION: Write a method that does the Fibonacci sequence starting at a number that a user inputs
+n1 = 0
+n2 = 1 
+fibon = [n1, n2]
+
+for i in range(0, 10):
+    n3 = n1 + n2
+    fibon.append(n3)
+    n1 = n2
+    n2 = n3
+
+print(fibon)
 
 
